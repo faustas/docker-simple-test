@@ -1,10 +1,14 @@
 # Install Docker Compose
 
 > Get the source
-(1) sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o $HOME/bin/docker-compose
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.3/docker-compose-$(uname -s)-$(uname -m)" -o $HOME/bin/docker-compose
+```
 
 > Set the rights
-(2) sudo chmod +x $HOME/bin/docker-compose
+```bash
+sudo chmod +x $HOME/bin/docker-compose
+```
 
 # Application example
 
@@ -21,22 +25,34 @@
 # Run the application
 
 > Start the containers and install the requirements
-`docker-compose up`
+```
+docker-compose up
+```
 
 > Check in the browser
-`http://0.0.0.0:5000/`
+```
+http://0.0.0.0:5000/
+```
 
 # Some more Docker commands
 
 > See what is currently running
-`docker-compose` ps
+```
+docker-compose ps
+```
 
 > Start the services in the background with -d flag
-`docker-compose up -d`
+```
+docker-compose up -d
+```
 
 > Stop service when started in the background
-`docker-compose stop`
+```
+docker-compose stop
+```
 
 > Removing also the data from the containers
-`docker-compose down --volumes`
+```
+docker-compose down --volumes
+```
 

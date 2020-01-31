@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "5000:5000"
+    volumes:
+    # mounts the current directory on the host to the /code folder in the container
+    # allows modification of the code on the fly without rebuilding the image
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+    environment:
+      # Sets the webserver in development mode
+      # Allows refresh of the app during adaptation of files
+      FLASK_ENV: development        
+  redis:
+          #public Redis image from the Docker Hub
+          image: "redis:alpine"
+volumes:
+  logvolume01: {}

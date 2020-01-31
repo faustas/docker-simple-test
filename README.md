@@ -21,6 +21,8 @@ sudo chmod +x $HOME/bin/docker-compose
   Python included.
 - docker-compose.yml
   Defines the services
+- .env
+  Environment file where specific environment variables can be set.
 
 # Run the application
 
